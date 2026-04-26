@@ -2,7 +2,6 @@ import streamlit as st
 import numpy as np
 import pickle
 scaler = pickle.load(open("scaler.pkl", "rb"))
-import google.generativeai as genai
 
 
 # Load model
@@ -343,75 +342,3 @@ elif choice == "🔬 Advanced Input":
             st.warning("Medium Risk ⚠️")
         else:
             st.success("Low Risk ✅")
-# -----------------------------
-# CONFIGURE API (SECURE WAY)
-# -----------------------------
-# import os
-# import google.generativeai as genai
-
-# # AIzaSyB1Qz0nDPDEzzOsvnhZgNjq-alHkM62YuE
-
-
-# genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
-
-# # ✅ UPDATED MODEL (IMPORTANT FIX)
-# model_llm = genai.GenerativeModel("gemini-1.5-flash")
-
-
-# # -----------------------------
-# # CHATBOT UI
-# # -----------------------------
-# st.write("---")
-# st.header("🤖 Credit Card AI Assistant")
-
-# # Initialize chat history
-# if "chat" not in st.session_state:
-#     st.session_state.chat = []
-
-# # Input box
-# user_msg = st.text_input("💬 Ask your question:")
-
-# # Send button
-# if st.button("Send"):
-
-#     if user_msg.strip() != "":
-
-#         with st.spinner("Thinking... 🤔"):
-
-#             try:
-#                 prompt = f"""
-#                 You are a professional financial advisor in India.
-
-#                 Help users with:
-#                 - Credit card eligibility
-#                 - Reasons for rejection
-#                 - How to improve CIBIL score
-#                 - Steps to get a credit card
-
-#                 Rules:
-#                 - Use simple English
-#                 - Give practical advice
-#                 - Keep answers short and clear
-
-#                 Question: {user_msg}
-#                 """
-
-#                 response = model_llm.generate_content(prompt)
-#                 answer = response.text
-
-#             except Exception as e:
-#                 answer = "⚠️ Error: Please check API key or internet connection."
-
-#             # Save chat
-#             st.session_state.chat.append(("You", user_msg))
-#             st.session_state.chat.append(("Bot", answer))
-
-
-# # -----------------------------
-# # DISPLAY CHAT (CHATGPT STYLE 🔥)
-# # -----------------------------
-# for role, msg in st.session_state.chat:
-#     if role == "You":
-#         st.chat_message("user").write(msg)
-#     else:
-#         st.chat_message("assistant").write(msg)
