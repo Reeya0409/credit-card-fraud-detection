@@ -11,20 +11,21 @@ st.set_page_config(page_title="Fraud Detection", layout="wide")
 
 # ---------- CUSTOM STYLE ----------
 st.markdown("""
-<style>
-            
-.block-container {
-    padding-top: 0rem !important;
-}
+<style>      
+
 header {
-    visibility: hidden;
+    background: transparent !important;
 }
 
+
+[data-testid="stToolbar"] {
+    right: 2rem;
+}
             
 /* FORCE TEXT COLOR FIX */
-html, body, [class*="css"] {
-    color: #f1f5f9 !important;
-}
+# html, body, [class*="css"] {
+#     color: #f1f5f9 !important;
+# }
 
 /* Markdown text */
 [data-testid="stMarkdownContainer"] {
@@ -128,6 +129,19 @@ p {
 h1, h2, h3 {
     color: #ffffff;
 }
+
+
+/* When sidebar is expanded */
+button[aria-label="Hide sidebar"] svg {
+    fill: white !important;
+    stroke: white !important;
+}
+
+/* When sidebar is collapsed */
+button[aria-label="Show sidebar"] svg {
+    fill: white !important;
+    stroke: white !important;
+}          
 
 </style>
 """, unsafe_allow_html=True)
