@@ -76,16 +76,16 @@ Predict fraud probability
 📸 Screenshots  
 
 🏠 Home Page
-![Home Page](homepage.png)
+![Home Page](Screenshot1.png)
 
 ⚡ Quick Test
-![Quick Test](quicktest.png)
+![Quick Test](Screenshot2.png)
 
 🔬 Advanced Input
-![Advanced Input](ss1.png)
+![Advanced Input](screenshot3.png)
 
 📊 Prediction Result
-![Prediction Result](ss2.png)
+![Prediction Result](screenshot4.png)
 
 ---
 
