@@ -73,6 +73,21 @@ Simulate full transaction data
 Predict fraud probability   
 
 ---
+📸 Screenshots  
+
+🏠 Home Page
+![Home Page](homepage.png)
+
+⚡ Quick Test
+![Quick Test](quicktest.png)
+
+🔬 Advanced Input
+![Advanced Input](ss1.png)
+
+📊 Prediction Result
+![Prediction Result](ss2.png)
+
+---
 
 📊 How It Works   
 
